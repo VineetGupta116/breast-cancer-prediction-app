@@ -5,6 +5,7 @@ import scipy.stats as s
 
 # Load the saved Gaussian parameters
 (mu_0, sigma_0, mu_1, sigma_1, strong_features) = joblib.load("gaussian_parameters.pkl")
+st.write("strong_features:", strong_features)
 
 # Streamlit UI
 st.title("🩺 Breast Cancer Diagnosis Predictor")

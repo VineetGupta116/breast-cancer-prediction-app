@@ -4,7 +4,7 @@ import joblib
 import scipy.stats as s
 
 # Load the saved Gaussian parameters
-(mu_0, sigma_0, mu_1, sigma_1) = joblib.load("gaussian_parameters.pkl")
+(mu_0, sigma_0, mu_1, sigma_1, strong_features) = joblib.load("gaussian_parameters.pkl")
 
 # Streamlit UI
 st.title("🩺 Breast Cancer Diagnosis Predictor")
@@ -26,8 +26,7 @@ if uploaded_file is not None:
 
     # (Optional) Select only the relevant features (same as used in training)
     # If required, replace the below list with your actual selected features.
-    selected_features = ["radius_mean", "texture_mean", "perimeter_mean", "area_mean",
-                         "smoothness_mean", "compactness_mean", "concavity_mean", "symmetry_mean"]
+    
     
     data = data[selected_features]
 

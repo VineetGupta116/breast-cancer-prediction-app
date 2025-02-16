@@ -28,7 +28,7 @@ if uploaded_file is not None:
     # If required, replace the below list with your actual selected features.
     
     
-    data = data[selected_features]
+    data = data[strong_features]
 
     # Compute Gaussian probabilities for each class
     p_class1 = s.multivariate_normal.pdf(data, mu_1, sigma_1)
